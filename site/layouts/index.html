@@ -1,5 +1,15 @@
 {{ partial "header" . }}
 
-<h1>Hugo with Gulp, PostCSS and Webpack</h1>
+<div class="styleguide-container">
+  <div class="styleguide-main">
+    <h1>Styleguide Based on Victor Hugo</h1>
+
+    <ul>
+      {{ range where .Data.Pages.ByWeight "Type" "styleguide"}}
+      <li><h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2></li>
+      {{ end }}
+    </ul>
+  </div>
+</div>
 
 {{ partial "footer" . }}

@@ -1,0 +1,37 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+.styleguide-header {
+  padding: 16px 24px;
+  background: #132830;
+}
+.styleguide-home > a {
+  text-decoration: none;
+  color: #fff;
+}
+.styleguide-container {
+  padding: 24px;
+  display: flex;
+}
+.styleguide-tos {
+  width: 272px;
+}
+.styleguide-main {
+  flex-grow: 1;
+}
+
+.styleguide-example-code {
+  background: #fafaff;
+  padding: 16px 24px;
+  & pre {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.styleguide-example {
+  padding-bottom: 40px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}

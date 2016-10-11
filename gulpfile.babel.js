@@ -9,8 +9,8 @@ import webpack from "webpack";
 import webpackConfig from "./webpack.conf";
 
 const browserSync = BrowserSync.create();
-const hugoBin = "hugo";
-const defaultArgs = ["-d", "../dist", "-s", "site", "-v"];
+const hugoBin = `./bin/hugo.${process.platform === "windows" ? "exe" : process.platform}`;
+const defaultArgs = ["-d", "../dist", "-s", "site"];
 
 gulp.task("hugo", (cb) => buildSite(cb));
 gulp.task("hugo-preview", (cb) => buildSite(cb, ["--buildDrafts", "--buildFuture"]));

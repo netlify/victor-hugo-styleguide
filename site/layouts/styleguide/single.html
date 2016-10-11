@@ -1,0 +1,14 @@
+{{ partial "header" . }}
+
+<div class="styleguide-container">
+  <div class="styleguide-tos">
+    <h2>{{ .Title }}</h2>
+    {{ .TableOfContents }}
+  </div>
+
+  <div class="styleguide-main">
+    {{ .Content }}
+  </div>
+</div>
+
+{{ partial "footer" . }}
