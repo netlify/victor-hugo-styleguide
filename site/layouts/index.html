@@ -4,11 +4,18 @@
   <div class="styleguide-main">
     <h1>Styleguide Based on Victor Hugo</h1>
 
-    <ul>
-      {{ range where .Data.Pages.ByWeight "Type" "styleguide"}}
-      <li><h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2></li>
-      {{ end }}
-    </ul>
+    <h2>Sections:</h2>
+
+    <div class="styleguide-tos">
+      <ul>
+        {{ range where .Data.Pages.ByWeight "Type" "styleguide"}}
+        <li>
+          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+          <p>{{ .Description }}</p>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
   </div>
 </div>
 

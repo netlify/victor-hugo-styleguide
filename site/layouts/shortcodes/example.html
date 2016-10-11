@@ -2,7 +2,8 @@
   <div class="styleguide-example-rendered">
   {{ .Inner | markdownify }}
   </div>
-  <div class="styleguide-example-code styleguide-collapsed">
-    <pre><code>{{ (trim .Inner " \n") | htmlEscape | safeHTML }}</code></pre>
+  <div class="styleguide-example-code styleguide-example-collapsed">
+    <pre class="styleguide-example-pre"><code>{{ (trim .Inner " \n") | htmlEscape | safeHTML }}</code></pre>
+    <a class="styleguide-example-toggle"></a>
   </div>
 </div>

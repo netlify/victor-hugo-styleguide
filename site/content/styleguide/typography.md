@@ -1,5 +1,6 @@
 ---
 title: typography
+description: Core typographic elements
 weight: 1
 ---
 

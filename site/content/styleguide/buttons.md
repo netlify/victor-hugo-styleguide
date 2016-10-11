@@ -1,5 +1,6 @@
 ---
 title: buttons
+description: All buttons for interactions
 weight: 10
 ---
 

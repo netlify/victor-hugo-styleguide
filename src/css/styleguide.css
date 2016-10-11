@@ -21,17 +21,43 @@ body, html {
   flex-grow: 1;
 }
 
-.styleguide-example-code {
-  background: #fafaff;
-  padding: 16px 24px;
-  & pre {
-    padding: 0;
-    margin: 0;
-  }
-}
-
 .styleguide-example {
   padding-bottom: 40px;
   margin-bottom: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.styleguide-example-pre {
+  background: #fafaff;
+  padding: 16px 24px;
+}
+
+.styleguide-example-collapsed .styleguide-example-pre {
+  display: none;
+}
+.styleguide-example-toggle {
+  padding: 4px 16px 4px;
+  border-radius: 4px;
+  font-size: 10px;
+  background: #fafafa;
+  cursor: pointer;
+  &:hover {
+    color: #444;
+    background: #ddd;
+  }
+  &:before {
+    content: "\2715";
+  }
+}
+.styleguide-example-collapsed .styleguide-example-toggle:before {
+  content: '•••'
+}
+
+.styleguide-tos ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  & ul {
+    margin-left: 16px;
+  }
 }
