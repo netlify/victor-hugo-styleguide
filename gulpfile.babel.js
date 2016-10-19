@@ -54,7 +54,12 @@ function buildSite(cb, options) {
   const args = options ? defaultArgs.concat(options) : defaultArgs;
 
   return cp.spawn(hugoBin, args, {stdio: "inherit"}).on("close", () => {
-    browserSync.reload();
-    cb();
+    if (code === 0) {
+      browserSync.reload();
+      cb();
+    } else {
+      browserSync.notify("Hugo build failed :(");
+      cb("Hugo build failed");
+    }
   });
 }
